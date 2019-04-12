@@ -5,8 +5,8 @@ services:
     hostname: pgadmin4
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: "user@domain.com"
-      PGADMIN_DEFAULT_PASSWORD: "SuperSecret"
+      PGADMIN_DEFAULT_EMAIL: $PGADMIN_DEFAULT_EMAIL
+      PGADMIN_DEFAULT_PASSWORD: $PGADMIN_DEFAULT_PASSWORD
     volumes:
       - ./pgadmin:/var/lib/pgadmin
     ports:
